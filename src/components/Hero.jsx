@@ -31,7 +31,7 @@ const Hero = () => {
     formData.append('image',file)
     // axios.post("http://127.0.0.1:5000", formData,{
     // axios.post("https://corndisease.umgo.ac.id", formData,{
-    axios.post("http://apicorndisease.al-muqarrabin.org/", formData,{
+    axios.post("https://apicorndisease.al-muqarrabin.org/", formData,{
       headers:{
         "Content-Type":"multipart/form-data",
       }

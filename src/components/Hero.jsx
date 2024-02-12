@@ -136,7 +136,7 @@ const Hero = () => {
                   <div>
                     <div className="bg-red-500 py-3 px-4 rounded-lg text-white">
                       <p className="text-lg md:text-xl">
-                        Classification result is <span className="font-semibold uppercase">{best.class}</span> <br />With <span className="font-semibold uppercase">{best.predict}% similarity</span> <br /> <span className="font-bold italic">This result cannot be a reference</span>
+                        Classification result is <span className="font-semibold uppercase">{best.class}</span> <br />With <span className="font-semibold uppercase">{best.predict}% similarity</span>
                       </p>
                     </div>
                   </div>

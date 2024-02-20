@@ -5,11 +5,11 @@ const Blight = () => {
         <h5 className="text-2xl text-slate-800">Northern Leaf Blight</h5>
         <p className="text-slate-400 mt-6">
           <span className="font-bold">Pathogens:</span> <br /> 
-          <ul>
-            <li>Tahap aseksual : Helminthosporium turcicum Pass.</li>
-            <li>Tahap seksual : Trichometasphaeria turcica Luttrell.</li>
-          </ul>
         </p>
+        <ul className="text-slate-400 mt-6">
+          <li>Tahap aseksual : Helminthosporium turcicum Pass.</li>
+          <li>Tahap seksual : Trichometasphaeria turcica Luttrell.</li>
+        </ul>
         <p className="text-slate-400 mt-6">
           <span className="font-bold">Symptoms:</span> <br />        
 Mula-mula terlihat bercak kecil, oval, kebasahan, kemudian bercak memanjang berbentuk elips, menjadi bercak nekrotik (kering) • yang luas (hawar), berwarna hijau keabu-abuan atau coklat, dengan panjang hawar 2,5 sampai 15 cm. Bercak-bercak ini pertama kali terdapat pada daun-daun bawah (tua) kemudian berkembang menuju daun-daun atas (muda). Bila infeksi cukup berat, tanaman cepat mati, dengan hawar berwarna abu-abu seperti terbakar atau mengering. Tongkol tidak terinfeksi walaupun hawar dapat terjadi pada kelobot. Konidia jamur berwarna abu-abu zaitun, berbentuk bulat panjang seperti kumparan, agak lurus, bersekat 3 sampai 8, berukuran 20 x 105 p dengan hilum menonjol. Konidia berkecambah pada kedua ujungnya. Konidiofora berwarna zaitun, bersekat 2 sampai 4, berukuran (7-9) x (150-250) p. Sporulasi terjadi pada suasana gelap. Tahap seksual menghasilkan peritesia bulat hitam, berisi askus silinder dengan 1-6 askospora yang jernih agak bengkok dan bersekat 3 serta berukuran 13-17 x 42-78 p.  Siklus Pen yakit Jamur H. turcicum bertahan hidup sampai satu tahun berupa miselium dorman dalam daun, kelobot, atau bagian tanaman lainnya pada sisa-sisa tanaman di lapang. Diantara konidia yang tua dapat berubah menjadi klamidospora yang berdinding tebal sehingga dapat bertahan lama. Konidia dapat tersebar jauh oleh angin sampai menginfeksi daun jagung. Infeksi kedua terjadi di antara tanaman jagung sekitarnya dari bercakbercak yang banyak terbentuk pada daun.
@@ -33,12 +33,12 @@ Pemupukan kalium (KC1) yang cukup dapat mengurangi serangan patogen terutama pad
         </p>
         <p className="text-slate-400 mt-6">
           <span className="font-bold">Control:</span> <br /> 
-          <ol>
-            <li>Tanam varietas tahan seperti Kalingga, Arjuna, dan Hibrida Cl. Varietas jagung manis (sweet corn) sangat peka terhadap penyakit ini.</li>
-            <li>Tanam jagung pada awal sampai akhir kemarau dan secara serempak. </li>
-            <li>Gunakan fungisida sistemik secara semprotan.</li>
-          </ol>
         </p>
+        <ol className="text-slate-400 mt-6">
+          <li>Tanam varietas tahan seperti Kalingga, Arjuna, dan Hibrida Cl. Varietas jagung manis (sweet corn) sangat peka terhadap penyakit ini.</li>
+          <li>Tanam jagung pada awal sampai akhir kemarau dan secara serempak. </li>
+          <li>Gunakan fungisida sistemik secara semprotan.</li>
+        </ol>
       </div>
     </>
   )
@@ -78,11 +78,11 @@ Telia ditemukan di sekitar pustula uredinia, berwarna hitam  kecoklatan, berdiam
         </p>
         <p className="text-slate-400 mt-6">
           <span className="font-bold">Control:</span> <br /> 
-          <ol>
-            <li>Tanam varietas tahan seperti Kalingga, Arjuna, Wiyasa, Pioneer-2.  Hibrida Cl peka terhadap karat ini.</li>
-            <li>Gunakan fungisida triadomefon atau golongan dithiokarbamat  secara semprotan.</li>
-          </ol>
         </p>
+        <ol className="text-slate-400 mt-6">
+          <li>Tanam varietas tahan seperti Kalingga, Arjuna, Wiyasa, Pioneer-2.  Hibrida Cl peka terhadap karat ini.</li>
+          <li>Gunakan fungisida triadomefon atau golongan dithiokarbamat  secara semprotan.</li>
+        </ol>
       </div>
     </>
   )
@@ -90,7 +90,6 @@ Telia ditemukan di sekitar pustula uredinia, berwarna hitam  kecoklatan, berdiam
 
 const DiseaseDescribe = (props) => {
   const {result} = props
-  console.log(result)
   return (
     <div className='rounded-lg shadow-lg dark:shadow-gray-800 p-6 bg-white dark:bg-slate-900'>
       <div className='flex items-center pb-6 border-b border-gray-100 dark:border-gray-800'>

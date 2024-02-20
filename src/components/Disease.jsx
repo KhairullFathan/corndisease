@@ -1,12 +1,6 @@
 import blight from '../assets/images/disease/blight.jpeg'
 import commonrust from '../assets/images/disease/commonrust.jpg'
 import grayspot from '../assets/images/disease/grayspot.jpg'
-// import image from '../assets/images/client/01.jpg'
-// import image1 from '../assets/images/client/05.jpg'
-// import image2 from '../assets/images/client/02.jpg'
-// import image3 from '../assets/images/client/04.jpg'
-// import image4 from '../assets/images/client/03.jpg'
-// import image5 from '../assets/images/client/06.jpg'
 
 const DiseaseArr = [{
   name: "Northern Corn Leaf Blight",

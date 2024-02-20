@@ -4,6 +4,47 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <style>
+      .leaflet-container {
+        width: 100%;
+        height: 100%;
+      }
+      .leaflet-tooltip-left:before {
+        right: 0;
+        margin-right: -12px;
+        border-left-color: rgb(100, 158, 234);
+      }
+      .leaflet-tooltip-right:before {
+        left: 0;
+        margin-left: -12px;
+        border-right-color: rgb(100, 158, 234);
+      }
+      .leaflet-tooltip-own {
+        position: absolute;
+        padding: 4px;
+        background-color: rgb(100, 158, 234,.8);
+        border: 0px solid rgb(100, 158, 234);
+        color: #000;
+        font-weight: 500;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        pointer-events: none;
+        box-shadow: 0 1px 3px rgb(100, 158, 234);
+      }
+      .leaflet-popup-content{
+        width: 150px;
+      }
+      .popup-classname{
+
+      }
+    </style>
     <title>Corn Disease Classification</title>
   </head>
   <body>

@@ -64,6 +64,9 @@ const Navbarsm = () => {
               <li className={`nav-item`}>
                 <Link1 to="class-disease" activeClass="text-blue-700" spy={true} smooth={true} duration={500} className="nav-link">Class Disease</Link1>
               </li>
+              <li className={`nav-item`}>
+                <Link1 to="spread-map" activeClass="text-blue-700" spy={true} smooth={true} duration={500} className="nav-link">Spread Map</Link1>
+              </li>
             </ul>
           </div>
         </div>

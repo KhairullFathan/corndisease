@@ -1,6 +1,6 @@
 import axios from "axios"
 import { animateScroll } from 'react-scroll';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { LuCamera , LuUpload } from "react-icons/lu"
 
 import PieChart from "./PieChart"
@@ -14,6 +14,45 @@ const Hero = () => {
   const [result, setResult] = useState([])
   const [best, setBest] = useState({})
   const [modalOpen, setModalOpen] = useState(false)
+  const [position, setPosition] = useState({
+    latitude:null,
+    longitude:null
+  })
+
+  useEffect(()=>{
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setPosition({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        })
+      })
+    } else {
+      console.log("Geolocation is not available in your browser.")
+    }
+  },[])
+
+  useEffect(()=>{
+    if(position.latitude && position.longitude && best.class){
+      const Latitude = position.latitude
+      const Longitude = position.longitude
+      // const Latitude = 0.47657720740792486 //0.5787822696201573 
+      // const Longitude = 123.46464760693839 //123.237217426287
+      axios.post(`${import.meta.env.VITE_APIURL}/location`, {
+        Latitude, Longitude, Disease: best.class
+      },{
+        headers:{
+          "Content-Type":"multipart/form-data",
+        }
+      })
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error.response)
+      })
+    }
+  },[best])
 
   const handleImageChange = (e) => {
     const pict = URL.createObjectURL(e.target.files[0])
@@ -29,9 +68,7 @@ const Hero = () => {
   const handleBtnClassification = (e) => {
     const formData = new FormData()
     formData.append('image',file)
-    // axios.post("http://127.0.0.1:5000", formData,{
-    // axios.post("https://corndisease.umgo.ac.id", formData,{
-    axios.post("https://apicorndisease.al-muqarrabin.org/", formData,{
+    axios.post(`${import.meta.env.VITE_APIURL}`, formData,{
       headers:{
         "Content-Type":"multipart/form-data",
       }
